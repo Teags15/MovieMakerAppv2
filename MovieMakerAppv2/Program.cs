@@ -14,9 +14,11 @@ namespace MovieMakerAppv2
         [STAThread]
         static void Main()
         {
+            TicketManager tm = new TicketManager();
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new HomeForm(tm));
         }
     }
 }
