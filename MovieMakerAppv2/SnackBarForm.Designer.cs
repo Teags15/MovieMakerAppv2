@@ -188,6 +188,7 @@ namespace MovieMakerAppv2
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(799, 437);
+            this.BackColor = System.Drawing.ColorTranslator.FromHtml("#f7a399");
             this.Controls.Add(this.btnCheckOut);
             this.Controls.Add(this.lblDrinks);
             this.Controls.Add(this.lblSnacks);

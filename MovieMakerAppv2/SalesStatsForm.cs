@@ -16,8 +16,12 @@ namespace MovieMakerAppv2
 
         public SalesStatsForm(TicketManager tm)
         {
-            InitializeComponent();
             this.tm = tm;
+            InitializeComponent();
+
+            //populate controls with information
+            lblTotalProfit.Text += tm.CalculateTotalPrice();
+            rtbSnackStats.Text = tm.TotalSnacksOrdered();
         }
 
         private void btnHome_Click(object sender, EventArgs e)

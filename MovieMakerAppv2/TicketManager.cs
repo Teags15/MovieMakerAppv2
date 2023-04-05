@@ -50,6 +50,18 @@ namespace MovieMakerAppv2
 
         }
 
+        public int GetAgeLimit(int ageRestriction)
+        {
+            return ageLimit[ageRestriction];
+        
+        }
+
+        public int GetRecentlyPurchasedTickets()
+        {
+            return ticketHolders[ticketHolders.Count - 1].GetTickets();
+
+        }
+
 
         //adds a ticket holder into the ticketHolders list
         public void AddTicketHolder(TicketHolder ticketHolder)
@@ -252,9 +264,16 @@ namespace MovieMakerAppv2
         {
             string sumary = "----- Total Ordered Snacks -----\n";
 
+            //make space between item and quantity uniformD
             for (int snackIndex = 0; snackIndex < availableSnacks.Count; snackIndex++)
             {
-                sumary += availableSnacks[snackIndex] + "   \tX\t" + SumItemsSold("snacks")[snackIndex] + "\n";
+                string item = availableSnacks[snackIndex];
+                for (int i = 0; i < 20 - item.Length; i++)
+                {
+                    item += " ";
+                }
+               
+                sumary += item + "   \tX\t " + SumItemsSold("snacks")[snackIndex] + "\n";
             }
 
             return sumary;
@@ -265,6 +284,11 @@ namespace MovieMakerAppv2
         {
             return $"Total Profit: ${CalculateTotalPrice()}";
 
+        }
+
+        public string GenerateRecentReciept()
+        {
+            return ticketHolders[ticketHolders.Count - 1].GenerateReciept(ticketPrice, availableSnacks, snackPrices, availableDrinks, drinkPrices);
         }
 
         //returns a string collecting all the values stored in the private variables

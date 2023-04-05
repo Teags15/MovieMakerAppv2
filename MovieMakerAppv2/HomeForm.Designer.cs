@@ -36,37 +36,41 @@
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(163)))), ((int)(((byte)(153)))));
+            this.lblTitle.Font = new System.Drawing.Font("Mongolian Baiti", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.Location = new System.Drawing.Point(149, 9);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(279, 37);
+            this.lblTitle.Size = new System.Drawing.Size(267, 34);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Movie Maker App";
             // 
             // btnAddTicketHolder
             // 
+            this.btnAddTicketHolder.BackColor = System.Drawing.Color.White;
             this.btnAddTicketHolder.Location = new System.Drawing.Point(202, 49);
             this.btnAddTicketHolder.Name = "btnAddTicketHolder";
             this.btnAddTicketHolder.Size = new System.Drawing.Size(172, 69);
             this.btnAddTicketHolder.TabIndex = 1;
             this.btnAddTicketHolder.Text = "Add Ticket Holder";
-            this.btnAddTicketHolder.UseVisualStyleBackColor = true;
+            this.btnAddTicketHolder.UseVisualStyleBackColor = false;
             this.btnAddTicketHolder.Click += new System.EventHandler(this.btnAddTicketHolder_Click);
             // 
             // btnStats
             // 
+            this.btnStats.BackColor = System.Drawing.Color.White;
             this.btnStats.Location = new System.Drawing.Point(202, 124);
             this.btnStats.Name = "btnStats";
             this.btnStats.Size = new System.Drawing.Size(172, 81);
             this.btnStats.TabIndex = 2;
             this.btnStats.Text = "View Sale Stats";
-            this.btnStats.UseVisualStyleBackColor = true;
+            this.btnStats.UseVisualStyleBackColor = false;
             this.btnStats.Click += new System.EventHandler(this.btnStats_Click);
             // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(163)))), ((int)(((byte)(153)))));
             this.ClientSize = new System.Drawing.Size(608, 412);
             this.Controls.Add(this.btnStats);
             this.Controls.Add(this.btnAddTicketHolder);
